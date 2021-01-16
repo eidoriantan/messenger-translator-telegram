@@ -28,11 +28,21 @@ const profile = require('./src/profile.js')
 const translate = require('./src/translate.js')
 
 const BOT_TOKEN = process.env.BOT_TOKEN
+const URL = process.env.URL
+const HOST = process.env.HOST || '0.0.0.0'
+const PORT = process.env.PORT || 443
 const DEBUG = process.env.DEBUG
 
 if (!BOT_TOKEN) throw new Error('Bot token/URL is not defined')
 
-const bot = new TeleBot(BOT_TOKEN)
+const bot = new TeleBot({
+  token: BOT_TOKEN,
+  webhook: {
+    url: URL,
+    host: HOST,
+    port: PORT
+  }
+})
 
 bot.on(['/help', '/start'], async (msg) => {
   const senderID = msg.from.id
