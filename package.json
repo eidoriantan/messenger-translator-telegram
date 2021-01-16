@@ -1,0 +1,58 @@
+{
+  "name": "messenger-translator-telegram",
+  "version": "0.1.0",
+  "description": "Webhook server for Messenger translator for Telegram",
+  "keywords": [
+    "node",
+    "webhook",
+    "telegram",
+    "bot",
+    "app",
+    "translate",
+    "translator"
+  ],
+  "homepage": "https://translator.eidoriantan.tech",
+  "bugs": "https://github.com/eidoriantan/messenger-translator-telegram/issues",
+  "license": "GPL-3.0-only",
+  "author": {
+    "name": "Adriane Justine Tan",
+    "email": "eidoriantan@gmail.com",
+    "url": "https://eidoriantan.github.io"
+  },
+  "contributors": [],
+  "funding": {
+    "type": "patreon",
+    "url": "https://patreon.com/eidoriantan"
+  },
+  "main": "server.js",
+  "directories": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eidoriantan/messenger-translator-telegram.git"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "lint": "standard",
+    "postlint": "git log -1 --format=%B | commitlint",
+    "pretest": "npm run lint",
+    "test": "mocha test/index.js"
+  },
+  "dependencies": {
+    "@vitalets/google-translate-api": "^4.0.0",
+    "fuzzyset.js": "^1.0.6",
+    "ini": "^1.3.8",
+    "mssql": "^6.3.1",
+    "telebot": "^1.4.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "mocha": "^8.2.1",
+    "should": "^13.2.3",
+    "standard": "^16.0.3"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "private": true
+}
