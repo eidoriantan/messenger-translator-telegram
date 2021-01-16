@@ -1,7 +1,7 @@
 {
   "name": "messenger-translator-telegram",
   "version": "0.1.0",
-  "description": "Webhook server for Messenger translator for Telegram",
+  "description": "Server for Messenger translator for Telegram",
   "keywords": [
     "node",
     "webhook",
