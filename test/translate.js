@@ -47,6 +47,6 @@ describe('Translator', () => {
       locale: 'tl'
     })
 
-    result.should.endWith('Para sa tulong, i-type "--help"')
+    result.should.endWith('Para sa tulong, i-type "/help"')
   })
 })
